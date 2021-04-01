@@ -10,8 +10,11 @@ let pokemonList = [
 for (let i= 0; i < pokemonList.length ; i++) //having i add against the list
 {
   if(pokemonList[i].height > 5) //this is the conditional
+pokemonList.foreach (function (pokemon)
   {
-    document.write(`${pokemonList[i].name}  (height: ${pokemonList[i].height})-This is a LARGE pokemon! <br>`) //this dictates what happens when the pokemon is large enough for the conditional.
+  if(pokemonList.height > 5) //this is the conditional
+  {
+    document.write(`${pokemonList.name}  (height: ${pokemonList.height})-This is a LARGE pokemon! <br>`) //this dictates what happens when the pokemon is large enough for the conditional.
   }
-  else document.write(`${pokemonList[i].name}  (height: ${pokemonList[i].height} <br>`) //this is for all who dont meet conditional.
-}
+  else document.write(`${pokemonList.name}  (height: ${pokemonList.height} <br>`) //this is for all who dont meet conditional.
+});
