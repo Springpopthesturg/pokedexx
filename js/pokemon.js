@@ -1,15 +1,26 @@
-let pokemonList = [
-  {name: 'Balbasaur' , type: ['poison' , 'grass'] , height: 2.04} ,
-  {name: 'Charmander' , type: 'fire' , height: 2} ,
-  {name: 'Charmeleon' , type: 'fire' , height: 3.07} ,
-  {name: 'Charizard' , type: 'fire' , height: 5.07} ,
-  {name: 'Squirtle' , type: 'water' , height: 1.04}
-]
+let pokemonRepository = (function () {
+  let pokemonList = [
+    {name: 'Balbasaur' , type: ['poison' , 'grass'] , height: 2.04} ,
+    {name: 'Charmander' , type: 'fire' , height: 2} ,
+    {name: 'Charmeleon' , type: 'fire' , height: 3.07} ,
+    {name: 'Charizard' , type: 'fire' , height: 5.07} ,
+    {name: 'Squirtle' , type: 'water' , height: 1.04}
+  ];
 
+  function getAll () {
+    return pokemonList;
+  }
 
-for (let i= 0; i < pokemonList.length ; i++) //having i add against the list
-{
-  if(pokemonList[i].height > 5) //this is the conditional
+  function add (pokemon) {
+    pokemonList.push (pokemon);
+  }
+
+  return {
+    getAll: getAll,
+    add: add
+  };
+})();
+
 pokemonList.foreach (function (pokemon)
   {
   if(pokemonList.height > 5) //this is the conditional
