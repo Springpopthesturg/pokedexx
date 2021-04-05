@@ -21,11 +21,12 @@ let pokemonRepository = (function () {
   };
 })();
 
-pokemonList.foreach (function (pokemon)
-  {
-  if(pokemonList.height > 5) //this is the conditional
-  {
-    document.write(`${pokemonList.name}  (height: ${pokemonList.height})-This is a LARGE pokemon! <br>`) //this dictates what happens when the pokemon is large enough for the conditional.
+pokemonRepository.getAll().forEach(function (pokemon) {
+  if (pokemon.height > 5) {
+    document.write(
+      `${pokemon.name} (height: ${pokemon.height})-This is a LARGE pokemon! <br>`
+    );
+  } else {
+    document.write(`${pokemon.name} (height: ${pokemon.height}) <br>`);
   }
-  else document.write(`${pokemonList.name}  (height: ${pokemonList.height} <br>`) //this is for all who dont meet conditional.
 });
