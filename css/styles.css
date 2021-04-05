@@ -1,0 +1,13 @@
+.button-dex {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  /* styles the background color, font color, and text decoration of the button */
+  background-color: red;
+  color: bisque;
+  text-decoration: none;
+  /*adds spacing to the button */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid black;
+}

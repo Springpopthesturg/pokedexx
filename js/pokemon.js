@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let pokemonList = [
+  let pokedex = [
     {name: 'Balbasaur' , type: ['poison' , 'grass'] , height: 2.04} ,
     {name: 'Charmander' , type: 'fire' , height: 2} ,
     {name: 'Charmeleon' , type: 'fire' , height: 3.07} ,
@@ -8,25 +8,28 @@ let pokemonRepository = (function () {
   ];
 
   function getAll () {
-    return pokemonList;
+    return pokedex;
   }
 
   function add (pokemon) {
-    pokemonList.push (pokemon);
+    pokedex.push (pokemon);
   }
 
+  function addListItem (pokemon) {
+    let pokemonList = document.querySelector (".pokemon-list");
+    let listPokemon = document.createElement('li');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('button-dex');
+    listPokemon.appendChild(button);
+    pokemonList.appendChild(listPokemon);
   return {
     getAll: getAll,
-    add: add
-  };
+    add: add,
+    addListItem: addListItem
+  }; 
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-  if (pokemon.height > 5) {
-    document.write(
-      `${pokemon.name} (height: ${pokemon.height})-This is a LARGE pokemon! <br>`
-    );
-  } else {
-    document.write(`${pokemon.name} (height: ${pokemon.height}) <br>`);
-  }
+ pokemonRepository.addListItem(pokemon);
 });
