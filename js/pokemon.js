@@ -23,6 +23,15 @@ let pokemonRepository = (function () {
     button.classList.add('button-dex');
     listPokemon.appendChild(button);
     pokemonList.appendChild(listPokemon);
+    pokemonListener(pokemon, button);
+  }
+
+  function pokemonListener (pokemon, button) {
+    button.addEventListener('click', function () {
+      showDetails(pokemon);
+    }
+    )};
+
   return {
     getAll: getAll,
     add: add,
