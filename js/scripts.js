@@ -68,12 +68,12 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
-      console.log(pokemon);
+      showModal(pokemon)
     });
   }
 
   //creating modal to show the details of pokemon when clicked
-  function showModal(title, text, pokemon) {
+  function showModal(pokemon) {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
       modal.classList.add('modal');
@@ -83,6 +83,10 @@ let pokemonRepository = (function () {
     closeButtonElement.innerText = 'Close';
     closeButtonElement.addEventListener('click', hideModal);
 
+    let pokeImg = document.createElement('img');
+      pokeImg.src = pokemon.imageUrl;
+      pokeImg.alt = pokemon.name;
+
     let pokeName = document.createElement('h1');
     pokeName.innerText = pokemon.name;
 
@@ -90,6 +94,7 @@ let pokemonRepository = (function () {
     pokeHeight.innerText = `Height: ${pokemon.height} ft`;
     
     modal.appendChild(closeButtonElement);
+    modal.appendChild(pokeImg);
     modal.appendChild(pokeName);
     modal.appendChild(pokeHeight);
     modalContainer.appendChild(modal);
