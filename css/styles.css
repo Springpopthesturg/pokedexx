@@ -1,0 +1,16 @@
+body {
+  font-size: 16px;
+  font-family: 'Zen Dots', cursive;
+  padding: 20px;
+  text-align: center;
+}
+
+.list-group {
+  text-align: center;
+  width: 700px;
+  margin: 40px auto;
+}
+
+.modal-body {
+  text-align: center;
+}
