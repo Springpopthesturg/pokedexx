@@ -14,3 +14,7 @@ body {
 .modal-body {
   text-align: center;
 }
+
+ul.ba {
+  list-style-type: none;
+}
