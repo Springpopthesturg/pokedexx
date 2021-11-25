@@ -14,6 +14,11 @@ let pokemonRepository = (function () {
     ) {
       pokedex.push(pokemon);
     }
+    else {
+      /* eslint-disable no-console */
+      console.error("pokemon is not correct");
+      /* eslint-disable no-console */
+    }
   }
   //listing format for pokemon
   function addListItem(pokemon) {
@@ -53,7 +58,9 @@ let pokemonRepository = (function () {
           add(pokemon);
         });
       }).catch(function (e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-disable no-console */
       })
   }
 
@@ -79,7 +86,9 @@ let pokemonRepository = (function () {
         returnValue(details.types);
       })
       .catch(function (e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-disable no-console */
       });
   }
 
