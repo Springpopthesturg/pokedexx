@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 body {
    font-family: 'Pixelify Sans';
+   background-color: linear-gradient(#000000,#f2f6f7);
 }
 
 .navbar-brand {
@@ -19,19 +20,17 @@ ul {
   column-count: 3;
 }
 
-main {
-  background-image: linear-gradient(#000000,#bcbcbc);
-}
+
 
 .logo-img {
   max-width: 40%;
   margin: 0 auto;
 }
 
-.my-btn {
+.btn {
   border: none;
   color: #000000;
-  background-color: #cc0000;
+  background-color: #f31212;
   padding: 10px 15px;
   margin: 5px auto;
   border-radius: 5px;
@@ -49,7 +48,7 @@ main {
 .btn:hover {
   opacity: 0.8;
   color: #ffff;
-  background-color: #3564ae;
+  background-color: #b62c2c;
   
 }
 
