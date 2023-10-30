@@ -3,8 +3,20 @@ body {
    font-family: 'Pixelify Sans';
 }
 
+.navbar-brand {
+  text-align: center;
+}
+
 nav {
   background-image: linear-gradient(#cc0000,#edf6f9);
+}
+
+ul {
+  list-style-type: none;
+}
+
+div {
+  column-count: 3;
 }
 
 main {
