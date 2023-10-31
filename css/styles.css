@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&display=swap');
 body {
    font-family: 'Pixelify Sans';
-   background-color: linear-gradient(#000000,#f2f6f7);
+   background-image: linear-gradient(#cc0000,#edf6f9);
 }
 
 .navbar-brand {
   text-align: center;
-}
-
-nav {
-  background-image: linear-gradient(#cc0000,#edf6f9);
 }
 
 ul {
@@ -30,7 +26,7 @@ ul {
 .btn {
   border: none;
   color: #000000;
-  background-color: #f31212;
+  background-color: #f3bb12;
   padding: 10px 15px;
   margin: 5px auto;
   border-radius: 5px;
